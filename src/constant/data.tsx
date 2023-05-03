@@ -70,3 +70,16 @@ export const arrayColumns = [
   { field: "name", headerName: "Name", width: 300 },
   { field: "link", headerName: "Link", width: 300 },
 ]
+
+export const topics = [
+  { id: 1, name: "Array 🐣", link: "/array", totalQuestions: arrayDSA.length },
+  { id: 2, name: "Linked List", link: "/linked-list", totalQuestions: 450 },
+  { id: 3, name: "Stack", link: "/stack", totalQuestions: 450 },
+  { id: 4, name: "Queue", link: "/queue", totalQuestions: 450 },
+  { id: 5, name: "Tree", link: "/tree", totalQuestions: 450 },
+  { id: 6, name: "Graph", link: "/graph", totalQuestions: 450 },
+  { id: 7, name: "Hashing", link: "/hashing", totalQuestions: 450 },
+  { id: 8, name: "Heap", link: "/heap", totalQuestions: 450 },
+  { id: 9, name: "Matrix", link: "/matrix", totalQuestions: 450 },
+  { id: 10, name: "String", link: "/string", totalQuestions: 450 },
+]

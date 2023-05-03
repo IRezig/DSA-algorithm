@@ -33,10 +33,18 @@ const Item = styled("td")(() => ({
 
 export const TList = (props: ListProps) => {
   const [open, setOpen] = useState(false)
+  const [checked, setChecked] = useState(false)
+  const totalQuestions = props.items.length
+  let totalDone = 0
 
   return (
     <Table>
-      <Snack open={open} setOpen={setOpen} severity="success" message={"Question is marked as done"} />
+      <Snack
+        open={open}
+        setOpen={setOpen}
+        severity={checked ? "success" : "error"}
+        message={totalDone + "/" + totalQuestions + " question is marked as done"}
+      />
       <Line>
         <Header>Done</Header>
         <Header>ID</Header>
@@ -47,7 +55,11 @@ export const TList = (props: ListProps) => {
         <Line key={index}>
           <Item>
             <Checkbox
+              color="success"
               onClick={() => {
+                if (checked) {
+                  totalDone--
+                }
                 setOpen(true)
               }}
             />
